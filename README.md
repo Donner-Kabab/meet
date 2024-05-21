@@ -1,12 +1,12 @@
-MEET APP PROJECT DESCRIPTION
+                          # MEET APP PROJECT DESCRIPTION
   The Meet app is a progressive web app with a serverless backend. It offers offline access to upcoming events in specific cities and it prioritizes code quality and test coverage for optimal performance.
 
-Feature 1 - Filter Events by City:
+## Feature 1 - Filter Events by City:
   Scenario 1: When a user hasn't searched for a city, show upcoming events from all cities.
   Scenario 2: User should see a list of suggestions when they search for a city.
   Scenario 3: User can select a city from the suggested list.
     
-Feature 2 - Show/Hide Event Details:
+## Feature 2 - Show/Hide Event Details:
   Scenario 1: an event element is collapsed by default.
     GIVEN the user hasn't selected an event;
     WHEN the user views the list of events;
@@ -25,7 +25,7 @@ Feature 2 - Show/Hide Event Details:
       As a user, I should be able to show/hide events and event details so I can see more/less information about an event.
 
 
-Feature 3 - Specify Number of Events:
+## Feature 3 - Specify Number of Events:
   Scenario 1: When user hasn't specified a number, 32 events are shown by default.
     GIVEN user opens the app;
     WHEN there is no specified number of events;
@@ -39,7 +39,7 @@ Feature 3 - Specify Number of Events:
       As a user, I should be able to specify the amount of event information presented to make the search easier.
 
 
-Feature 4 - Use the App when Offline:
+## Feature 4 - Use the App when Offline:
   Scenario 1: Show cached data when there's no internet connection.
     GIVEN the user opens the app;
     WHEN there is no internet connection;
@@ -53,7 +53,7 @@ Feature 4 - Use the App when Offline:
       As a user, I should be able to use the app while my device is offline.
 
     
-Feature 5 - Add an App Shortcut to the Home Screen:
+## Feature 5 - Add an App Shortcut to the Home Screen:
   Scenario 1: User can install the meet app as a shortcut on their device's home screen.  
     GIVEN users should be able to create a shortcut;
     WHEN user selects "create shortcut";
@@ -62,7 +62,7 @@ Feature 5 - Add an App Shortcut to the Home Screen:
       As a user, I should be able to have effective usability and create a shortcut from my device's homescreen.
 
 
-Feature 6 - Display Charts Visualizing Event Details:
+## Feature 6 - Display Charts Visualizing Event Details:
   Scenario 1: Show a chart with the number of upcoming events in each city.
     GIVEN the user needs more specific information on events;
     WHEN the user selects a city;
