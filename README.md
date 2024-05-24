@@ -1,4 +1,4 @@
-                          # MEET APP PROJECT DESCRIPTION
+                           MEET APP PROJECT DESCRIPTION
   The Meet app is a progressive web app with a serverless backend. It offers offline access to upcoming events in specific cities and it prioritizes code quality and test coverage for optimal performance.
 
 ## Feature 1 - Filter Events by City:
@@ -69,3 +69,6 @@
     THEN they will see a chart with upcoming events in the city.
 
       As a user, I should be able to see charts with event information in each city.
+
+# Serverless functions
+  In this app we will also be using serverless functions.  These functions are responsible for managing user access and the OAuth tokens that go with user access.  This will allow the app to be more effective with the resources and scale them effectively to match user needs.  
