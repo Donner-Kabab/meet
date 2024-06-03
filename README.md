@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+                           MEET APP PROJECT DESCRIPTION
+  The Meet app is a progressive web app with a serverless backend. It offers offline access to upcoming events in specific cities and it prioritizes code quality and test coverage for optimal performance.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Feature 1 - Filter Events by City:
+  ### Scenario 1: When a user hasn't searched for a city, show upcoming events from all cities.
+  ### Scenario 2: User should see a list of suggestions when they search for a city.
+  ### Scenario 3: User can select a city from the suggested list.
+    
+## Feature 2 - Show/Hide Event Details:
+ ### Scenario 1: an event element is collapsed by default.
+    GIVEN the user hasn't selected an event;
+    WHEN the user views the list of events;
+    THEN the event elements are collapsed. 
+    
+  ### Scenario 2: User can expand an event to see details.
+    GIVEN the list of events are displayed;
+    WHEN the user clicks on an event element;
+    THEN the event element is expanded to show more details.
+    
+  ### Scenario 3: User can collapse an event to hide details
+    GIVEN the event element has been expanded;
+    WHEN the user clicks to collapse the event element;
+    THEN the event element is collapsed back to its default position.
+    
+      As a user, I should be able to show/hide events and event details so I can see more/less information about an event.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Feature 3 - Specify Number of Events:
+  ### Scenario 1: When user hasn't specified a number, 32 events are shown by default.
+    GIVEN user opens the app;
+    WHEN there is no specified number of events;
+    THEN 32 events will be shown by default.
+    
+  ### Scenario 2: User can change the number of events displayed.
+    GIVEN the user opened the app;
+    WHEN they specify a number of events;
+    THEN the specified number of events will be shown.  
+   
+      As a user, I should be able to specify the amount of event information presented to make the search easier.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Feature 4 - Use the App when Offline:
+  ### Scenario 1: Show cached data when there's no internet connection.
+    GIVEN the user opens the app;
+    WHEN there is no internet connection;
+    THEN the app will show cached data to the user.
+    
+  ### Scenario 2: Show error when user changes search settings.
+    GIVEN the settings have been changed;
+    WHEN the user goes back to the homepage;
+    THEN there will be an error.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+      As a user, I should be able to use the app while my device is offline.
 
-### `npm test`
+    
+## Feature 5 - Add an App Shortcut to the Home Screen:
+  ### Scenario 1: User can install the meet app as a shortcut on their device's home screen.  
+    GIVEN users should be able to create a shortcut;
+    WHEN user selects "create shortcut";
+    THEN the user will find the shortcut icon on their home screen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      As a user, I should be able to have effective usability and create a shortcut from my device's homescreen.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Feature 6 - Display Charts Visualizing Event Details:
+  ### Scenario 1: Show a chart with the number of upcoming events in each city.
+    GIVEN the user needs more specific information on events;
+    WHEN the user selects a city;
+    THEN they will see a chart with upcoming events in the city.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      As a user, I should be able to see charts with event information in each city.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Serverless functions
+  In this app we will also be using serverless functions.  These functions are responsible for managing user access and the OAuth tokens that go with user access.  This will allow the app to be more effective with the resources and scale them effectively to match user needs.  
