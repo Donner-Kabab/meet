@@ -22,11 +22,11 @@ functions:
     handler: handler.getAccessToken
     events:
       - http:
-          path: api/token/{"ya29.a0AXooCgsQuAr5-yKu1C_OmJfcd4dVoDFqz5CIf163uJt3UYhnEh9Mi6-L8OpTZU0QVQiE6gnh_qfynO4jpBqKbvNSrHBZU9rDb3RGk3xFI5SS2Z0Wsb3Cnr2fQVVKOKAkwsayYNXsM4qBm6c9AR-9GkhVTKGYaZRkKaBXaCgYKAY4SARESFQHGX2MiWG01hTxWyXMFwfvPkz2UuA0171","refresh_token":"1//09W12mp34PinzCgYIARAAGAkSNwF-L9Ir9EKeoxtxlhFvAM7c0v76WA73y3k-Napj4cZBMaIUOa-byRP5mlNdRRV9pzxomZzCO98"}
+          path: api/token/{code}
           method: get
   getCalendarEvents:
     handler: handler.getCalendarEvents
     events:
       - http:
-          path: api/get-events{"ya29.a0AXooCgsQuAr5-yKu1C_OmJfcd4dVoDFqz5CIf163uJt3UYhnEh9Mi6-L8OpTZU0QVQiE6gnh_qfynO4jpBqKbvNSrHBZU9rDb3RGk3xFI5SS2Z0Wsb3Cnr2fQVVKOKAkwsayYNXsM4qBm6c9AR-9GkhVTKGYaZRkKaBXaCgYKAY4SARESFQHGX2MiWG01hTxWyXMFwfvPkz2UuA0171","refresh_token":"1//09W12mp34PinzCgYIARAAGAkSNwF-L9Ir9EKeoxtxlhFvAM7c0v76WA73y3k-Napj4cZBMaIUOa-byRP5mlNdRRV9pzxomZzCO98"}
+          path: api/get-events{access_token}
           method: get
