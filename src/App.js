@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import EventList from "./components/EventList";
 import "./App.css";
 
-const App() {
+const App = () => {
   return (
     <div className="App">
       <EventList />
     </div>
   );
-}
+};
 
 export default App;
