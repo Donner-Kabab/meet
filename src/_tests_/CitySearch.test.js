@@ -58,6 +58,7 @@ describe("<CitySearch /> component", () => {
     }
   });
 
+  //Test checks whether the value of query's state changes when the user clicks a suggestion
   test("renders the suggestion text in the textbox upon clicking on the suggestion", async () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
