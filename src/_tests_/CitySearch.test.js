@@ -3,7 +3,8 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CitySearch from "../components/CitySearch";
-import { extractLocations, getEvents, allLocations } from "../api";
+import { extractLocations, getEvents } from "../api";
+import mockData from "../mock-data";
 
 describe("<CitySearch /> component", () => {
   let CitySearchComponent;
