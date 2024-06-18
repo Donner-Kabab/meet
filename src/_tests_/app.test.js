@@ -1,22 +1,19 @@
 // src/__tests__/App.test.js
 
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "../App";
 
 describe("<App /> component", () => {
-  let AppDOM;
-  beforeEach(() => {
-    AppDOM = render(<App />).container.firstChild;
-  });
-  
-  test("renders list of events", () => {
-    const AppDOM = render(<App />).container.firstChild;
-    expect(AppDOM.querySelector("#event-list")).toBeInTheDocument();
+  test("Should have foo and bar", () => {
+    render(<App />);
+    const component = screen.getByRole("event-list");
+    expect(component).toBeDefined();
   });
 
-  test("render CitySearch", () => {
-    const AppDOM = render().container.firstChild;
-    expect(AppDOM.querySelector("#city-search")).toBeInTheDocument();
+  test("Should have foo and bar", () => {
+    render(<App />);
+    const component = screen.getByRole("city-search");
+    expect(component).toBeDefined();
   });
 });
 ////////////////////This is the basic structure used to test React components//////////////////////////////////
