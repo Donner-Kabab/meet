@@ -32,5 +32,4 @@ describe("<CitySearch /> component", () => {
     expect(suggestionList).toHaveClass("suggestions");
   });
 
-  //////////////////////////
 });

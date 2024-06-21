@@ -4,16 +4,21 @@ import { render, screen } from "@testing-library/react";
 import App from "../App";
 
 describe("<App /> component", () => {
-  test("Should have foo and bar", () => {
+  test("List of events", () => {
     render(<App />);
     const component = screen.getByRole("event-list");
     expect(component).toBeDefined();
   });
 
-  test("Should have foo and bar", () => {
+  test("city search", () => {
     render(<App />);
     const component = screen.getByRole("city-search");
     expect(component).toBeDefined();
   });
+
+  test("number of events", () => {
+    expect(
+      component.container.firstChild.querySelector("number-of-events")
+    ).toBeInTheDocument();
+  });
 });
-////////////////////This is the basic structure used to test React components//////////////////////////////////

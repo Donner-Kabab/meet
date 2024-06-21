@@ -1,6 +1,6 @@
 // src/__tests__/EventList.test.js
 
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import EventList from "../components/EventList";
 import { getEvents } from "../api";
 
@@ -14,8 +14,8 @@ describe("<EventList /> component", () => {
     const allEvents = await getEvents();
 
     EventListComponent.rerender(<EventList events={allEvents} />);
-    /*expect(EventListComponent.getAllByRole("listitem")).toHaveLength(
+    /*expect(EventListComponent.getAllByRole("event-list")).toHaveLength(
       allEvents.length
     );*/
   });
-});
+})
