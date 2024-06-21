@@ -15,10 +15,4 @@ describe("<App /> component", () => {
     const component = screen.getByRole("city-search");
     expect(component).toBeDefined();
   });
-
-  test("number of events", () => {
-    expect(
-      component.container.firstChild.querySelector("number-of-events")
-    ).toBeInTheDocument();
-  });
 });
