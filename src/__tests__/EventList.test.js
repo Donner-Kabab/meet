@@ -1,10 +1,10 @@
 // src/__tests__/EventList.test.js
 
 import { render, screen, waitFor, within } from "@testing-library/react";
-import App from "../App";
-import EventList from "../components/EventList";
 import { getEvents } from "../api";
 import NumberOfEvents from "../components/NumberOfEvents";
+import EventList from "../components/EventList";
+import App from "../App";
 
 describe("<EventList /> component", () => {
   let EventListComponent;
@@ -16,9 +16,9 @@ describe("<EventList /> component", () => {
     const allEvents = await getEvents();
 
     EventListComponent.rerender(<EventList events={allEvents} />);
-    /*expect(EventListComponent.getAllByRole("event-list")).toHaveLength(
-      allEvents.length
-    );*/
+    expect(EventListComponent.getAllByRole("event-list")).toHaveLength(
+      allEvents.length(0)
+    );
   });
 
   test("renders correct number of events", async () => {

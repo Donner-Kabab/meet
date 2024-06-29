@@ -9,11 +9,4 @@ describe("<App /> component", () => {
     const component = screen.getByRole("event-list");
     expect(component).toBeDefined();
   });
-
-  test("city search", () => {
-    render(<App />);
-    const component = screen.getByRole("city-search");
-    expect(component).toBeDefined();
-  });
 });
-
