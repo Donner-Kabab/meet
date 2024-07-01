@@ -5,18 +5,19 @@ import EventList from "./components/EventList";
 import NumberOfEvents from "./components/NumberOfEvents";
 import { getEvents } from "./api";
 import "./App.css";
+import { mockData } from "./mock-data";
 
 const App = () => {
   const [events, setEvents] = useState([]);
   const [currentNOE, setCurrentNOE] = useState(32);
   const fetchData = async () => {
-    const allEvents = await getEvents();
+    const allEvents = mockData;
     setEvents(allEvents.slice(0, currentNOE));
   };
 
-  /*useEffect(() => {
+  useEffect(() => {
     fetchData();
-  }, []);*/
+  }, []);
 
   return (
     <div className="App">

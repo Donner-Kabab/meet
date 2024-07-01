@@ -23,6 +23,10 @@ const CitySearch = ({ allLocations }) => {
     setShowSuggestions(false); // to hide the list
   };
 
+  /*useEffect(() => {
+    setSuggestions(allLocations);
+  }, [`${allLocations}`]);*/
+
   return (
     <div id="city-search" role="city-search">
       <input
