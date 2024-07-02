@@ -8,22 +8,28 @@ import "./App.css";
 import { mockData } from "./mock-data";
 
 const App = () => {
-  const [events, setEvents] = useState([]);
-  const [currentNOE, setCurrentNOE] = useState(32);
   const [allLocations, setAllLocations] = useState([]);
+  const [currentNOE, setCurrentNOE] = useState(32);
+  const [events, setEvents] = useState([]);
+  const [currentCity, setCurrentCity] = useState("See all cities");
+
   const fetchData = async () => {
     const allEvents = mockData;
-    setEvents(allEvents.slice(0, currentNOE));
+    const filteredEvents =
+      currentCity === "See all cities"
+        ? allEvents
+        : allEvents.filter((event) => event.location === currentCity);
+    setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [currentCity]);
 
   return (
     <div className="App">
-      <CitySearch allLocations={allLocations} />
+      <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents />
       <EventList events={events} />
     </div>

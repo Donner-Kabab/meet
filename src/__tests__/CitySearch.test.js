@@ -52,9 +52,11 @@ describe("<CitySearch /> integration", () => {
   test("renders the suggestion text in the textbox upon clicking on the suggestion", async () => {
     const CitySearchComponent = render(<CitySearch />);
     const user = userEvent.setup();
-    //const allEvents = await getEvents();
     const allLocations = extractLocations(mockData);
     CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+    CitySearchComponent.rerender(
+      <CitySearch allLocations={allLocations} setCurrentCity={() => {}} />
+    );
 
     const cityTextBox = CitySearchComponent.queryByRole("textbox");
     await user.type(cityTextBox, "Berlin");
