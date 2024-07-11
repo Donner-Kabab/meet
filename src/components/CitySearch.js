@@ -39,7 +39,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
-        <ul className="suggestions">
+        <ul className="suggestions" role="list">
           {suggestions.map((suggestion) => {
             return (
               <li onClick={handleItemClicked} key={suggestion}>

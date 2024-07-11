@@ -49,7 +49,7 @@ defineFeature(feature, (test) => {
       const AppDOM = AppComponent.container.firstChild;
       CitySearchDOM = AppDOM.querySelector("#city-search");
       const citySearchInput = within(CitySearchDOM).queryByRole("textbox");
-      await user.type(citySearchInput, "Berlin");
+      await user.type(citySearchInput, "Berlin, Germany");
     });
 
     then(

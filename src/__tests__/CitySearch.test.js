@@ -44,8 +44,7 @@ describe("<CitySearch /> integration", () => {
     const cityTextBox = within(CitySearchDOM).queryByRole("textbox");
     await user.click(cityTextBox);
 
-    const suggestionListItems =
-      within(CitySearchDOM).queryAllByRole("listitem");
+    const suggestionListItems = within(CitySearchDOM).queryAllByRole("list");
     expect(suggestionListItems.length).toBe(1);
   });
 
