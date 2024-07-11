@@ -3,7 +3,7 @@ import puppeteer from "puppeteer";
 describe("show/hide event details", () => {
   jest.setTimeout(10000);
 
-///Turn off headless mode///
+  ///Turn off headless mode///
   let browser;
   let page;
   beforeAll(async () => {
