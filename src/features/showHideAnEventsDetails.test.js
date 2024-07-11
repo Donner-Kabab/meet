@@ -1,6 +1,6 @@
 import { loadFeature, defineFeature } from "jest-cucumber";
 import { render, waitFor, within } from "@testing-library/react";
-import { getEvents } from "../api";
+import userEvent from "@testing-library/user-event";
 import App from "../App";
 
 const feature = loadFeature("./src/features/showHideAnEventsDetails.feature");
@@ -41,9 +41,16 @@ defineFeature(feature, (test) => {
       });
     });
 
-    when("user clicks and event element", () => {});
+    when("user clicks and event element", async () => {
+      const button = AppComponent.queryAllByText("Show Details")[0];
+      await userEvent.click(button);
+    });
 
-    then("the event element is expanded to show more details", () => {});
+    then("the event element is expanded to show more details", () => {
+      const EventDOM = AppComponent.container.firstChild;
+      const details = EventDOM.querySelector(".details");
+      expect(details).toBeInTheDocument();
+    });
   });
 
   ///scenario 3///
