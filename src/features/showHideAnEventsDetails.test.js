@@ -59,13 +59,17 @@ defineFeature(feature, (test) => {
     when,
     then,
   }) => {
-    given("the event element has be expanded", () => {});
+    let AppComponent;
+    given("the event element has be expanded", async () => {
+      AppComponent = render(<App />);
+    });
 
-    when("user clicks to collapse the event element", () => {});
+    when("user clicks to collapse the event element", async () => {
+      ///help////
+    });
 
-    then(
-      "the event element is collapsed back to its default position",
-      () => {}
-    );
+    then("the event element is collapsed back to its default position", () => {
+      ///help////
+    });
   });
 });
