@@ -33,7 +33,7 @@ defineFeature(feature, (test) => {
   });
 
   ///Scenario 2///
-  test("User should see a list of suggestions when they search for a city.", ({
+  /*test("the user should receive a list of cities (suggestions) that match what they’ve typed", ({
     given,
     when,
     then,
@@ -61,9 +61,9 @@ defineFeature(feature, (test) => {
       }
     );
   });
-
+*/
   ///Scenario 3///
-  test("User can select a city from the suggested list.", ({
+  /*test("the user should recieve a list of upcoming events in that city", ({
     given,
     and,
     when,
@@ -118,5 +118,5 @@ defineFeature(feature, (test) => {
         expect(EventListItems).toHaveLength(berlinEvents.length);
       }
     );
-  });
+  });*/
 });

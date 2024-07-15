@@ -42,14 +42,14 @@ defineFeature(feature, (test) => {
     });
 
     when("user clicks and event element", async () => {
-      const button = AppComponent.queryAllByText("Show Details")[0];
+      const button = AppComponent.queryAllByText("Show")[0];
       await userEvent.click(button);
     });
 
     then("the event element is expanded to show more details", () => {
-      //const EventDOM = AppComponent.container.firstChild;
-      //const details = EventDOM.querySelector(".details");
-      //expect(details).toBeInTheDocument();
+      const EventDOM = AppComponent.container.firstChild;
+      const details = EventDOM.querySelector(".details");
+      expect(details).toBeInTheDocument();
     });
   });
 
