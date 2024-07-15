@@ -41,13 +41,3 @@ describe("show/hide event details", () => {
   });
 
 });
-
-describe("filter events by city", () => {
-  test("When user hasn’t searched for a city, show upcoming events from all cities.", async () => {});
-
-  test("User should see a list of suggestions when they search for a city", () => {});
-
-  test("User can select a city from the suggested list.", () => {});
-
-
-});
