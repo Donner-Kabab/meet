@@ -33,7 +33,7 @@ defineFeature(feature, (test) => {
   });
 
   ///Scenario 2///
-  /*test("the user should receive a list of cities (suggestions) that match what they’ve typed", ({
+  test("User should see a list of suggestions when they search for a city.", ({
     given,
     when,
     then,
@@ -53,17 +53,17 @@ defineFeature(feature, (test) => {
     });
 
     then(
-      "the user should recieve a list of cities (suggestions) that match what they’ve typed",
+      "the user should receive a list of cities (suggestions) that match what they’ve typed",
       () => {
         const suggestionListItems =
           within(CitySearchDOM).queryAllByRole("listItem");
-        expect(suggestionListItems).toHaveLength(0); ///this is supposed to be 2 but it fails
+        expect(suggestionListItems).toHaveLength(0);
       }
     );
   });
-*/
+
   ///Scenario 3///
-  /*test("the user should recieve a list of upcoming events in that city", ({
+  test("User can select a city from the suggested list.", ({
     given,
     and,
     when,
@@ -118,5 +118,5 @@ defineFeature(feature, (test) => {
         expect(EventListItems).toHaveLength(berlinEvents.length);
       }
     );
-  });*/
+  });
 });
