@@ -65,11 +65,14 @@ defineFeature(feature, (test) => {
     });
 
     when("user clicks to collapse the event element", async () => {
-      ///help////
+      const button = AppComponent.queryAllByText("Hide")[0];
+      await userEvent.click(button);
     });
 
     then("the event element is collapsed back to its default position", () => {
-      ///help////
+      const EventDOM = AppComponent.container.firstChild;
+      const details = EventDOM.querySelector(".details");
+      expect(details).toBeNull();
     });
   });
 });
