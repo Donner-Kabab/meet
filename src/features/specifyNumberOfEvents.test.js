@@ -15,10 +15,11 @@ defineFeature(feature, (test) => {
       AppComponent = render(<App />);
     });
 
-    when("there is no specified number of events", () => {});
-    //const AppDOM = AppComponent.container.firstChild;
-    //const EventListDOM = AppDOM.querySelector("#event-list");
-    //expect(EventListDOM).toBeInTheDocument();
+    when("there is no specified number of events", () => {
+      const AppDOM = AppComponent.container.firstChild;
+      const EventListDOM = AppDOM.querySelector("#event-list");
+      expect(EventListDOM).toBeInTheDocument();
+    });
 
     then(/^(\d+) events will be shown by default$/, async (arg0) => {
       const AppDOM = AppComponent.container.firstChild;
