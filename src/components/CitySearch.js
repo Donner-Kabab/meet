@@ -16,17 +16,24 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
 
     setQuery(value);
     setSuggestions(filteredLocations);
+
+    let infoText;
+    if (filteredLocations.length === 0) {
+      infoText =
+        "We can not find the city you are looking for. Please try another city";
+    } else {
+      infoText = "";
+    }
+    setInfoAlert(infoText);
   };
+
   const handleItemClicked = (event) => {
     const value = event.target.textContent;
     setQuery(value);
     setShowSuggestions(false); // to hide the list
     setCurrentCity(value);
+    setInfoAlert("");
   };
-
-  /*useEffect(() => {
-    setSuggestions(allLocations);
-  }, [`${allLocations}`]);*/
 
   return (
     <div id="city-search" role="city-search">
