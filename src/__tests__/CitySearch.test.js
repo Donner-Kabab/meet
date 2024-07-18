@@ -10,7 +10,13 @@ import { mockData } from "../mock-data";
 describe("<CitySearch /> component", () => {
   let CitySearchComponent;
   beforeEach(() => {
-    CitySearchComponent = render(<CitySearch />);
+    CitySearchComponent = render(
+      <CitySearch
+        allLocations={[]}
+        setCurrentCity={() => {}}
+        setInfoAlert={() => {}}
+      />
+    );
   });
 
   test("renders text input", () => {
