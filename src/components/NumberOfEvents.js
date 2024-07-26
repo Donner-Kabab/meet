@@ -15,6 +15,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
       infoText = "";
     }
     setErrorAlert(infoText);
+    setEventNumber(value);
   };
 
   return (
@@ -24,7 +25,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
       <input
         type="text"
         className="number-of-events-input"
-        //value={eventNumber}
+        value={eventNumber}
         onChange={handleInputChanged}
       />
     </div>
