@@ -7,6 +7,7 @@ import { getEvents, extractLocations } from "./api";
 import "./App.css";
 import { mockData } from "./mock-data";
 import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
+import CityEventsChart from "./components/CityEventsChart";
 
 const App = () => {
   const [allLocations, setAllLocations] = useState([]);
@@ -57,6 +58,7 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}
       />
+      <CityEventsChart allLocations={allLocations} events={events} />
       <EventList events={events} />
     </div>
   );
